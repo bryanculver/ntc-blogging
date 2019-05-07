@@ -1,0 +1,10 @@
+---
+- name: "Debug"
+  hosts: localhost
+  vars_files:
+    - "vars/{{ env }}.yml"
+  tasks:
+    - debug:
+        var: "not_secret_message"
+    - debug:
+        var: "top_secret_message"
